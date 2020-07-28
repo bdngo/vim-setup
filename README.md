@@ -12,3 +12,4 @@ My personal GVim setup.
   - Python
   - Java
   - Haskell
+- [Undotree](https://github.com/mbbill/undotree)
