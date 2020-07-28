@@ -17,6 +17,7 @@ set hlsearch
 set cursorline
 set foldenable
 set incsearch
+set smartcase
 
 " column ruler
 set colorcolumn=80
@@ -28,6 +29,15 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+" undo directory
+if has("persistent_undo")
+    set undodir=$HOME."/.vim/.undodir"
+    set undofile
+endif
+
+" remaps
+nnoremap untr UndotreeToggle
 
 " airline
 let g:airline_theme='solarized'
