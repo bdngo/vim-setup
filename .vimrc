@@ -1,7 +1,8 @@
 " color themes
 syntax enable
 set background=dark
-colorscheme solarized
+set termguicolors
+colorscheme NeoSolarized
 
 " indentation
 set tabstop=4
@@ -10,6 +11,10 @@ set shiftwidth=4
 set expandtab
 set smartindent
 autocmd FileType scheme setlocal shiftwidth=2 softtabstop=2 expandtab
+
+" whitespace
+set list!
+set listchars=trail:~,tab:>-,nbsp:␣
 
 " misc
 set showcmd
@@ -32,7 +37,7 @@ augroup END
 
 " undo directory
 if has("persistent_undo")
-    set undodir=$HOME."/.vim/.undodir"
+    set undodir=$HOME/.vim/.undodir
     set undofile
 endif
 
